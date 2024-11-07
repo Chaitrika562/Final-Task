@@ -64,6 +64,52 @@
     max-width: 1700px !important;
   }
 }
+@media screen and (max-width: 576px) {
+  .tophead .topbar-right .call {
+    margin-right: 0px !important;
+    padding-right: 0px !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  .tophead {
+    background-color: white;
+  }
+  .tophead .topbar-right {
+    color: #646464 !important;
+  }
+  .tophead .topbar-right .call {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+  }
+  .tophead .topbar-right .call::after {
+    display: none;
+  }
+  .tophead .topbar-right .call div {
+    margin-right: 15px;
+  }
+  .tophead .topbar-right .call div span {
+    display: none;
+  }
+  .tophead .topbar-right .call button {
+    background-image: linear-gradient(to right, #ff5e17, #fa360a);
+    color: white;
+  }
+  .tophead .topbar-right .call button img {
+    display: none;
+  }
+  .tophead .topbar-right .call button span {
+    font-size: 16px;
+  }
+  .tophead .topbar-right .call button:hover {
+    background-image: linear-gradient(to right, #fa360a, #ff5e17);
+  }
+  .tophead .topbar-right .call a {
+    color: #646464 !important;
+  }
+}
 
 .pen-nav nav {
   padding: 0rem;
@@ -76,28 +122,114 @@
   transition: all 0.3s ease-in-out;
   background-color: #fff;
 }
-.pen-nav nav .container .sticknav-left > ul > li > a {
+.pen-nav nav .nav-menu .stickynav .stickynav-left ul li {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.pen-nav nav .nav-menu .stickynav .stickynav-left ul li .dropdown-toggle::after {
+  content: none;
+  border: none;
+}
+.pen-nav nav .nav-menu .stickynav .stickynav-left ul li .nav-link {
   display: block;
   text-decoration: none;
   font-size: 16px;
   line-height: 22px;
-  font-weight: 600;
   color: #000;
-  padding: 40px 13px;
   padding-right: 25px;
   text-transform: capitalize;
   font-family: "Source Sans Pro", sans-serif;
   transition: all 0.3s ease-in-out;
 }
-.pen-nav nav .container .sticknav-left > ul > li > a:hover {
+.pen-nav nav .nav-menu .stickynav .stickynav-left ul li .nav-link:hover {
   color: #fa360a;
 }
-.pen-nav nav .container .stickynav-right {
+@media screen and (max-width: 576px) {
+  .pen-nav nav .nav-menu .stickynav .stickynav-left ul li .nav-link::after {
+    left: 336px !important;
+  }
+}
+@media screen and (min-width: 992px) {
+  .pen-nav nav .nav-menu .stickynav .stickynav-left ul li .nav-link:hover::after {
+    transform: rotate(180deg) translateX(-6px);
+    transition: all ease 0.5s;
+  }
+  .pen-nav nav .nav-menu .stickynav .stickynav-left ul li .nav-link::after {
+    position: absolute;
+    padding-left: 6px;
+    content: "^";
+    font-family: "Font Awesome 5 Free";
+    font-size: 14px;
+    vertical-align: middle;
+    font-weight: 600;
+    transform: rotate(0deg);
+    display: inline-block;
+    line-height: 24px;
+  }
+}
+.pen-nav nav .nav-menu .stickynav .stickynav-left .dropdown:hover .dropdown-menu {
+  background-color: #fff;
+  width: 1146px;
+  position: absolute;
+  left: -471px;
+  top: 98px;
+  margin: auto;
+  padding: 15px;
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid red;
+}
+@media screen and (max-width: 992px) {
+  .pen-nav nav .nav-menu .stickynav .stickynav-left .dropdown:hover .dropdown-menu {
+    width: 700px;
+    left: -25px;
+  }
+}
+.pen-nav nav .nav-menu .stickynav .stickynav-left .dropdown .dropdown-menu .mega-menu-item > h5 {
+  padding-left: 15px;
+}
+.pen-nav nav .nav-menu .stickynav .stickynav-left .dropdown .mega-menu .mega-menu-item .portfolio, .pen-nav nav .nav-menu .stickynav .stickynav-left .dropdown .mega-menu .mega-menu-item .table, .pen-nav nav .nav-menu .stickynav .stickynav-left .dropdown .mega-menu .mega-menu-item .team, .pen-nav nav .nav-menu .stickynav .stickynav-left .dropdown .mega-menu .mega-menu-item .testimonial {
+  position: relative;
+  margin-bottom: 0px;
+  transition: all 0.5s ease 0s;
+  font-weight: 400;
+  font-size: 15px;
+}
+.pen-nav nav .nav-menu .stickynav .stickynav-left .dropdown .mega-menu .mega-menu-item .portfolio::before, .pen-nav nav .nav-menu .stickynav .stickynav-left .dropdown .mega-menu .mega-menu-item .table::before, .pen-nav nav .nav-menu .stickynav .stickynav-left .dropdown .mega-menu .mega-menu-item .team::before, .pen-nav nav .nav-menu .stickynav .stickynav-left .dropdown .mega-menu .mega-menu-item .testimonial::before {
+  position: absolute;
+  left: 0px;
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
+  font-size: 12px;
+  font-weight: bolder;
+  vertical-align: middle;
+  transform: rotate(0deg);
+  display: inline-block;
+  line-height: 24px;
+}
+.pen-nav nav .nav-menu .stickynav .stickynav-left .dropdown .mega-menu .mega-menu-item .portfolio:hover, .pen-nav nav .nav-menu .stickynav .stickynav-left .dropdown .mega-menu .mega-menu-item .table:hover, .pen-nav nav .nav-menu .stickynav .stickynav-left .dropdown .mega-menu .mega-menu-item .team:hover, .pen-nav nav .nav-menu .stickynav .stickynav-left .dropdown .mega-menu .mega-menu-item .testimonial:hover {
+  color: red;
+  padding-left: 33px;
+}
+.pen-nav nav .nav-menu .stickynav .stickynav-left .dropdown .mega-menu .mega-menu-item .dropdown-item {
+  background-color: white;
+}
+@media screen and (max-width: 576px) {
+  .pen-nav nav .nav-menu .stickynav .stickynav-left:hover .dropdown-menu {
+    flex-direction: column;
+    border: 1px solid grey;
+    width: 181px !important;
+  }
+  .pen-nav nav .nav-menu .stickynav .stickynav-left:hover .dropdown-item {
+    display: none;
+  }
+}
+.pen-nav nav .nav-menu .stickynav .stickynav-right {
   position: relative;
   padding-left: 20px;
   margin-left: 20px;
 }
-.pen-nav nav .container .stickynav-right .search::before {
+.pen-nav nav .nav-menu .stickynav .stickynav-right .search::before {
   content: "";
   position: absolute;
   left: 0;
@@ -106,27 +238,78 @@
   height: 22px;
   background-color: #c9c9c9;
 }
-.pen-nav nav .container .stickynav-right a {
+.pen-nav nav .nav-menu .stickynav .stickynav-right a {
   color: #818284;
   text-decoration: none;
   margin-right: 20px;
 }
-.pen-nav nav .container .stickynav-right a i {
+.pen-nav nav .nav-menu .stickynav .stickynav-right a i {
   font-size: 22px;
   font-weight: 900;
 }
-.pen-nav nav .container .stickynav-right a:hover i {
+.pen-nav nav .nav-menu .stickynav .stickynav-right a:hover i {
   color: #fa360a;
 }
-.pen-nav nav .container .stickynav-right button {
+.pen-nav nav .nav-menu .stickynav .stickynav-right button {
   background-image: linear-gradient(to right, #ff5e17, #fa360a);
   color: white;
 }
-.pen-nav nav .container .stickynav-right button:hover {
+.pen-nav nav .nav-menu .stickynav .stickynav-right button:hover {
   background-image: linear-gradient(to right, #fa360a, #ff5e17);
 }
+
+@media screen and (max-width: 992px) {
+  nav .nav-menu {
+    margin: 0px !important;
+    position: relative;
+  }
+  nav .nav-menu .stickynav .stickynav-left {
+    position: absolute;
+    left: 40px;
+  }
+  nav .nav-menu .stickynav .stickynav-left ul li .nav-link::after {
+    position: absolute;
+    padding-left: 6px;
+    content: "+" !important;
+    left: 634px;
+    color: black !important;
+    font-family: "Font Awesome 5 Free";
+    font-size: 14px;
+    vertical-align: middle;
+    font-weight: 600;
+    transform: rotate(0deg);
+    display: inline-block;
+    line-height: 24px;
+  }
+  nav .nav-menu .stickynav .stickynav-left ul li:hover::after {
+    color: red;
+  }
+}
 @media screen and (min-width: 1400px) {
-  .pen-nav nav .container {
+  nav .nav-menu {
     max-width: 1700px !important;
   }
+}
+.banner .banner-img {
+  background-image: url(./Images/banner1.jpg);
+  background-attachment: fixed;
+  background-size: 113% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 85vh;
+}
+.banner .banner-img::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+.banner .banner-img .container .banner-content {
+  color: white;
+  border: 1px solid white;
 }/*# sourceMappingURL=finbuzz.css.map */
