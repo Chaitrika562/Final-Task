@@ -1,7 +1,45 @@
 
 @import './variables';
+@keyframes fade-in-up {
+   0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+   }
+   100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+   }
+
+}
+@keyframes toright-from-left {
+    49% {
+        transform: translateX(100%);
+    }
+    50% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    51% {
+        opacity: 1;
+    }
+}
+@keyframes animate {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
 .tophead {
-    background: #fa360a;;
+    background: $redcolor;
     height: 50px;
     .container {
         
@@ -81,7 +119,7 @@
     @media screen and (max-width: 992px) {
         background-color: $whitetext;
         .topbar-right {
-            color: #646464 !important;
+            color: $greycolor !important;
             .call{
                 display: flex;
                 flex-direction: row;
@@ -98,7 +136,7 @@
                     }
                 }
                 button{
-                    background-image: linear-gradient(to right, #ff5e17, #fa360a);
+                    background-image: linear-gradient(to right, $orangecolor, $redcolor);
                     color: $whitetext; 
                     img {
                         display: none;
@@ -109,10 +147,10 @@
                 }
     
                 button:hover {
-                    background-image: linear-gradient(to right, #fa360a, #ff5e17);
+                    background-image: linear-gradient(to right, $redcolor, $orangecolor);
                 }
                 a {
-                    color: #646464 !important;
+                    color: $greycolor !important;
                 }
             }
         }
@@ -145,7 +183,7 @@
                             .nav-link{
                                 display: block;
                                 text-decoration: none;
-                                font-size: 16px;
+                                font-size: $size;
                                 line-height: 22px;
                                 color: #000;
                                 padding-right: 25px;
@@ -153,7 +191,7 @@
                                 font-family: "Source Sans Pro", sans-serif;
                                 transition: all 0.3s ease-in-out;
                             &:hover {
-                                color: #fa360a;
+                                color: $redcolor;
     
                                 }
                                 @media screen and (max-width: 576px) {
@@ -195,7 +233,7 @@
                                 padding: 15px;
                                 display: flex;
                                 justify-content: space-around;
-                                border-top: 1px solid red;
+                                border-top: 1px solid $redcolor;
                                 @media screen and (max-width: 992px) {
                                     width: 700px;
                                     left: -25px;
@@ -229,7 +267,7 @@
                                   line-height: 24px;
                                 }
                                 &:hover {
-                                    color: red;
+                                    color: $redcolor;
                                     padding-left: 33px;
                                 }
                               }
@@ -279,17 +317,17 @@
                         }
                         &:hover {
                             i {
-                                color: #fa360a;
+                                color: $redcolor;
                             }
                         }
                     }
                     button{
-                        background-image: linear-gradient(to right, #ff5e17, #fa360a);
+                        background-image: linear-gradient(to right, $orangecolor, $redcolor);
                         color: $whitetext; // Ensure $whitetext is defined earlier in your code
                     }
     
                     button:hover {
-                        background-image: linear-gradient(to right, #fa360a, #ff5e17);
+                        background-image: linear-gradient(to right, $redcolor, $orangecolor);
                     }
                     
                 }
@@ -325,7 +363,7 @@
                                 }
                             }
                             &:hover::after {
-                                color: red;
+                                color: $redcolor;
                             }
                         }
                     }
@@ -349,6 +387,7 @@
         background-size: 113% 100%;
         background-repeat: no-repeat;
         background-position: center;
+        position: relative;
         height: 85vh;
         &::after {
             content: '';
@@ -359,12 +398,136 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, .4);
-    z-index: -1;
+    z-index: 0;
         }
-        .container {
+        .banner-container {
+            position: absolute;
+            top: 272px;
+            z-index: 1;
             .banner-content {
-                color: white;
-                border: 1px solid white;
+                color: $whitetext;
+                div {
+                    border: 2px solid $whitetext;
+                    font-size: $size;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    visibility: visible;
+                    animation-duration: 1s;
+                    animation-delay: 1s;
+                    animation-name: fade-in-up;
+                    padding: 0px 17px;
+                    line-height: 32px;
+                    margin-bottom: 16px;
+                }
+                h2 {
+                    font-size: 46px;
+                    font-weight: 700;
+                    color: $whitetext;
+                    line-height: 50px;
+                    margin-bottom: 20px;
+                    animation-duration: 1s;
+                    animation-delay: 1.2s;
+                    animation-name: fade-in-up;
+                }
+                p {
+                    font-size: 18px;
+                    max-width: 75%;
+                    width: 100%;
+                    margin-bottom: 27px;
+                    animation-duration: 1s;
+                    animation-delay: 1.4s;
+                    animation-name: fade-in-up;
+                }
+            }
+            .banner-button {
+                ul {
+                    .start-btn {
+                        background-color: $redcolor;
+                        border: 1px solid transparent;
+                        text-transform: uppercase;
+                        padding: 14px 30px;
+                        a {
+                            color: $whitetext;
+                            padding: 10px;
+                            font-size: $size;
+                            font-weight: 500;
+                            text-decoration: none;
+                        }
+                        i {
+                            width: 24px;
+                            height: 24px;
+                            color: $whitetext;
+                            font-size: large;
+                        }
+                        &:hover {
+                            background-color: $whitetext;
+                            a {
+                                color: $redcolor;
+                            }
+                            i {
+                                color: $redcolor;
+                                -webkit-animation: toright-from-left 0.3s linear forwards;
+                                animation: toright-from-left 0.4s linear forwards;
+                            }
+                        }
+                    }
+                    .play-btn {
+                        margin: 0px 15px;
+                        background-color: $whitetext;
+                        width: 55px;
+                        height: 55px;
+                        line-height: 38px;
+                        position: relative;
+                        i {
+                            color: $redcolor;
+                        }
+                        &::before, 
+                        &::after {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            border: 1px solid $whitetext;
+                            left: -15px;
+                            right: -15px;
+                            top: -15px;
+                            bottom: -15px;
+                            border-radius: 50%;
+                            animation: animate 1.5s linear infinite;
+                        }
+                        &::after {
+                            animation-delay: 0.5s;
+                        }
+                    }
+                    .play-video {
+                        a {
+                            color: $whitetext;
+                            position: relative;
+                            text-transform: capitalize;
+                            &::after {
+                                content: "";
+                                background-color: #646464;
+                                height: 1px;
+                                position: absolute;
+                                width: 0%;
+                                right: 0px;
+                                bottom: -4px;
+                                opacity: 0;
+                                transition: all 0.8s;
+                            }
+                        }
+                        &:hover {
+                            a {
+                            &::after {
+                                background-color: $whitetext;
+                                visibility: visible;
+                                opacity: 1;
+                                width: 100%;
+                            }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
