@@ -1,0 +1,206 @@
+.tophead {
+  background: #fa360a;
+  height: 50px;
+}
+.tophead .container .topbar-left {
+  color: white;
+  position: relative;
+}
+.tophead .container .topbar-left .location {
+  margin-right: 25px;
+  padding-right: 25px;
+}
+.tophead .container .topbar-left .location::after {
+  content: "";
+  position: absolute;
+  top: -13px;
+  left: 262px;
+  width: 1px;
+  height: 50px;
+  background-color: white;
+  transform: skew(-20deg);
+}
+.tophead .container .topbar-left .location i {
+  font-size: 18px;
+  margin-right: 5px;
+}
+.tophead .container .topbar-left .email i {
+  font-size: 18px;
+  margin-right: 5px;
+}
+.tophead .container .topbar-right {
+  color: white;
+  position: relative;
+}
+.tophead .container .topbar-right .call {
+  margin-right: 25px;
+  padding-right: 25px;
+}
+.tophead .container .topbar-right .call::after {
+  content: "";
+  position: absolute;
+  top: -13px;
+  left: 262px;
+  width: 1px;
+  height: 50px;
+  background-color: white;
+  transform: skew(-20deg);
+}
+.tophead .container .topbar-right .call i {
+  font-size: 18px;
+  margin-right: 5px;
+}
+.tophead .container .topbar-right .call a {
+  text-decoration: none;
+  color: white;
+}
+.tophead .container .topbar-right .contact a {
+  color: white;
+  margin-right: 10px;
+  transition: all 0.3s ease-in-out;
+}
+@media screen and (max-width: 992px) {
+  .tophead .container .topbar-right .call::after {
+    display: none;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .tophead .container {
+    max-width: 1700px !important;
+  }
+}
+.pen-nav nav {
+  padding: 0rem;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 100;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+}
+.pen-nav nav .nav-menu .stickynav .stickynav-left ul li {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.pen-nav nav .nav-menu .stickynav .stickynav-left ul li .nav-link {
+  display: block;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000;
+  padding-right: 25px;
+  text-transform: capitalize;
+  font-family: "Source Sans Pro", sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+.pen-nav nav .nav-menu .stickynav .stickynav-left ul li .nav-link:hover {
+  color: #fa360a;
+}
+.pen-nav nav .nav-menu .stickynav .stickynav-left ul li .nav-link:hover::after {
+  transform: rotate(180deg) translateX(-6px);
+  transition: all ease 0.5s;
+}
+.pen-nav nav .nav-menu .stickynav .stickynav-left ul li .nav-link::after {
+  position: absolute;
+  padding-left: 6px;
+  content: "^";
+  font-family: "Font Awesome 5 Free";
+  font-size: 14px;
+  vertical-align: middle;
+  font-weight: 600;
+  transform: rotate(0deg);
+  display: inline-block;
+  line-height: 24px;
+}
+.pen-nav nav .nav-menu .stickynav .stickynav-left .dropdown:hover .dropdown-menu {
+  background-color: #fff;
+  width: 1146px;
+  position: absolute;
+  left: -471px;
+  top: 98px;
+  margin: auto;
+  padding: 15px;
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid red;
+}
+.pen-nav nav .nav-menu .stickynav .stickynav-left .dropdown .dropdown-menu .mega-menu-item > h5 {
+  padding-left: 15px;
+}
+.pen-nav nav .nav-menu .stickynav .stickynav-left .dropdown .mega-menu .mega-menu-item .portfolio, .pen-nav nav .nav-menu .stickynav .stickynav-left .dropdown .mega-menu .mega-menu-item .table, .pen-nav nav .nav-menu .stickynav .stickynav-left .dropdown .mega-menu .mega-menu-item .team, .pen-nav nav .nav-menu .stickynav .stickynav-left .dropdown .mega-menu .mega-menu-item .testimonial {
+  position: relative;
+  margin-bottom: 0px;
+  transition: all 0.5s ease 0s;
+  font-weight: 400;
+  font-size: 15px;
+}
+.pen-nav nav .nav-menu .stickynav .stickynav-left .dropdown .mega-menu .mega-menu-item .portfolio::before, .pen-nav nav .nav-menu .stickynav .stickynav-left .dropdown .mega-menu .mega-menu-item .table::before, .pen-nav nav .nav-menu .stickynav .stickynav-left .dropdown .mega-menu .mega-menu-item .team::before, .pen-nav nav .nav-menu .stickynav .stickynav-left .dropdown .mega-menu .mega-menu-item .testimonial::before {
+  position: absolute;
+  left: 0px;
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
+  font-size: 12px;
+  font-weight: bolder;
+  vertical-align: middle;
+  transform: rotate(0deg);
+  display: inline-block;
+  line-height: 24px;
+}
+.pen-nav nav .nav-menu .stickynav .stickynav-left .dropdown .mega-menu .mega-menu-item .portfolio:hover, .pen-nav nav .nav-menu .stickynav .stickynav-left .dropdown .mega-menu .mega-menu-item .table:hover, .pen-nav nav .nav-menu .stickynav .stickynav-left .dropdown .mega-menu .mega-menu-item .team:hover, .pen-nav nav .nav-menu .stickynav .stickynav-left .dropdown .mega-menu .mega-menu-item .testimonial:hover {
+  color: red;
+  padding-left: 33px;
+}
+.pen-nav nav .nav-menu .stickynav .stickynav-left .dropdown .mega-menu .mega-menu-item .dropdown-item {
+  background-color: white;
+}
+.pen-nav nav .nav-menu .stickynav .stickynav-right {
+  position: relative;
+  padding-left: 20px;
+  margin-left: 20px;
+}
+.pen-nav nav .nav-menu .stickynav .stickynav-right .search::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 40px;
+  width: 1px;
+  height: 22px;
+  background-color: #c9c9c9;
+}
+.pen-nav nav .nav-menu .stickynav .stickynav-right a {
+  color: #818284;
+  text-decoration: none;
+  margin-right: 20px;
+}
+.pen-nav nav .nav-menu .stickynav .stickynav-right a i {
+  font-size: 22px;
+  font-weight: 900;
+}
+.pen-nav nav .nav-menu .stickynav .stickynav-right a:hover i {
+  color: #fa360a;
+}
+.pen-nav nav .nav-menu .stickynav .stickynav-right button {
+  background-image: linear-gradient(to right, #ff5e17, #fa360a);
+  color: white;
+}
+.pen-nav nav .nav-menu .stickynav .stickynav-right button:hover {
+  background-image: linear-gradient(to right, #fa360a, #ff5e17);
+}
+@media screen and (min-width: 1400px) {
+  .pen-nav nav .nav-menu {
+    max-width: 1700px !important;
+  }
+}
+
+.banner {
+  width: 100%;
+  height: 700px;
+}
+.banner .banner-img {
+  background-image: url(./Images/banner1.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 700px;
+}/*# sourceMappingURL=finbuzz.css.map */
